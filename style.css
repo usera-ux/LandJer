@@ -1579,7 +1579,7 @@ body[lang="kk"] .hero p{
 /* === Очень маленькие экраны (до 480px) === */
 @media (max-width: 480px) {
   .hero-content-left{
-    margin-top: 30px;
+    margin-top: 60px;
   }
   .hero-content-left h1 {
     font-size: 1.2rem;
