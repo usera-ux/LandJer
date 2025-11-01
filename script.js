@@ -175,3 +175,10 @@ document.addEventListener('DOMContentLoaded', function () {
         }
       });
     });
+
+    const toggleBtn = document.getElementById('toggleTopBarBtn');
+    const topBar = document.getElementById('topBar');
+
+    toggleBtn.addEventListener('click', function () {
+      topBar.classList.toggle('hidden');
+    });
