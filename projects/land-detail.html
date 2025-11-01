@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Участок 1 гА, (рядом с Tay Парк)</title>
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+.header .nav-menu a:hover,
+.header .nav-menu a.active {
+  border-bottom: 2px solid black !important;
+}
+
+  body[lang="kk"] .logo{
+  margin-left: 115px;
+}
+body[lang="kk"] .nav-menu {
+  font-size: 10px !important;
+  margin-left: -20px;
+}
+.nav-menu{
+  margin-left: 100px;
+}
+.logo{
+  margin-left: 28px;
+}
+.header .nav-menu a:hover,
+.header .nav-menu a.active {
+  border-bottom: 2px solid black !important;}
+    body {
+      background: linear-gradient(to right, #E2E8DE, #e7efe2, #f4f5ee);
+      font-family: "Montserrat", sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .detail-page {
+      padding: 50px 20px;
+      min-height: 100vh;
+      margin-top: 130px;
+    }
+
+    .breadcrumb {
+      font-size: 1rem;
+      color: #666;
+      margin-bottom: 2rem;
+      display: flex;
+      gap: 1.2rem;
+      align-items: center;
+      margin-left: 45px;
+    }
+
+    .breadcrumb a {
+      color: #464646;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .detail-container {
+      max-width: 1600px;
+      margin: 0 auto;
+      background: rgba(255, 255, 255, 0.278);
+      border-radius: 20px;
+      padding: 40px;
+      display: flex;
+      gap: 40px;
+      flex-wrap: wrap;
+    }
+
+    .image-section {
+      flex: 0 0 400px;
+    }
+
+    .main-image {
+      width: 100%;
+      height: 590px;
+      object-fit: cover;
+      border-radius: 16px;
+      margin-bottom: 20px;
+    }
+
+    .thumbnail-gallery {
+      display: flex;
+      gap: 10px;
+    }
+
+    .thumbnail {
+      width: 150px;
+      height: 150px;
+      overflow: hidden;
+      position: relative;
+      background: #f0f0f0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .thumbnail img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .info-section {
+      flex: 1;
+      min-width: 300px;
+      margin-left: 30px;
+    }
+
+    .info-section h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #282828;
+      font-weight: 400;
+    }
+
+    .price-label {
+      font-size: 1.4rem;
+      color: #666;
+      margin-bottom: 0.5rem;
+      margin-top: 50px;
+    }
+
+    .price-value {
+      font-size: 2.3rem;
+      font-weight: 400;
+      color: #222;
+      margin-bottom: 2rem;
+    }
+    .details-list {
+  margin-bottom: 2rem;
+    margin-top: 70px;
+}
+
+.detail-item {
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0;
+  margin-top: 6px;
+}
+
+.detail-key {
+  font-weight: 500;
+  min-width: 100px;
+  color: #3c3c3c8b;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+}
+
+.detail-line {
+  width: 300px;
+  height: 1px;
+  border-top: 1px solid #ccc;
+  position: relative;
+  z-index: 0;
+}
+
+.detail-value {
+  color: #333;
+  white-space: nowrap;
+  position: relative;
+  z-index: 1;
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+
+
+    .buttons {
+      display: flex;
+      gap: 10px;
+      margin-top: 4.2rem;
+    }
+
+    .btn-primary {
+      width: 300px;
+      background: #133A1B;
+      color: white;
+      border: none;
+      padding: 18px;
+      border-radius: 13px;
+      font-size: 1.1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .btn-secondary {
+      padding: 18px 24px;
+      width: 300px;
+      background: #EDF3DE;
+      color: #1d1d1c;
+      border-radius: 13px;
+      font-size: 1.2rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+      border: none;
+    }
+
+    .btn-primary:hover {
+      background: #0d2c12;
+    }
+
+    .btn-secondary:hover {
+      background: #e8e8e8;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .detail-container {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .image-section {
+        flex: 0 0 auto;
+        max-width: 100%;
+      }
+
+      .main-image {
+        height: 250px;
+      }
+
+      .info-section {
+        min-width: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+     <!-- Header -->
+  <div class="header">
+    <div class="logo">
+      <img src="/images/black_logo.png" style="margin-left: 10px;" alt="LANDJER Logo">
+    </div>
+
+    <div class="nav-menu" style="background-color: rgba(255, 255, 255, 0.275);">
+      <a href="../index.html" class="active" style="color: black;" data-lang="nav-about">О нас</a>
+      <a href="#" style="color: black;" data-lang="nav-why-kosshy">Почему КОСШЫ</a>
+      <a href="../projects/sayjai.html" style="color: black;" data-lang="nav-projects">Проекты</a>
+      <a href="#" style="color: black;" data-lang="nav-terms">Условия</a>
+      <a href="../projects/catalog-map.html" style="color: black;" data-lang="nav-catalog">Каталог</a>
+      <a href="./lawer.html" style="color: black;" data-lang="nav-trusted">Нам доверяют</a>
+      <a href="#" style="color: black;" data-lang="nav-reviews">Отзывы</a>
+      <a href="#" style="color: black;" data-lang="nav-faq">FAQ</a>
+      <a href="#" style="color: black;" data-lang="nav-blog">Блог</a>
+      <a href="#" style="color: black;" data-lang="nav-contacts">Контакты</a>
+    </div>
+
+    <div class="lang-toggle" style="color: black;">Ру ▾</div>
+  </div>
+
+  <section class="detail-page">
+    <div class="breadcrumb">
+      <a href="../index.html">Главная</a> / 
+      <a href="./catalog-map.html">Каталог участков</a> / 
+      <span>Участок 1 гА, (рядом с Tay Парк)</span>
+    </div>
+
+    <div class="detail-container">
+      <!-- Левая часть — изображения -->
+      <div class="image-section">
+        <img src="../images/land.png" alt="Основное изображение участка" class="main-image">
+
+        <div class="thumbnail-gallery">
+          <div class="thumbnail">
+            <img src="../images/land1.png" alt="Миниатюра 1">
+          </div>
+          <div class="thumbnail"><img src="../images/land2.png" alt=""></div>
+          <div class="thumbnail">
+            <img src="../images/land3.png" alt="Миниатюра 2">
+          </div>
+          <div class="thumbnail">
+            <img src="../images/land4.png" alt="Миниатюра 3">
+          </div>
+        </div>
+      </div>
+
+      <!-- Правая часть — информация -->
+      <div class="info-section">
+        <h1>Участок 1 гА, (рядом с Tay Парк)</h1>
+
+        <div class="price-label">Стоимость:</div>
+        <div class="price-value">от 4,3 млн ₸</div>
+
+
+        <div class="details-list">
+  <div class="detail-item">
+    <span class="detail-key">Размер</span>
+    <span class="detail-line"></span>
+    <span class="detail-value">8-10 соток</span>
+  </div>
+  <div class="detail-item">
+    <span class="detail-key">Сдача объекта</span>
+    <span class="detail-line"></span>
+    <span class="detail-value">2023 / 3 квартал</span>
+  </div>
+  <div class="detail-item">
+    <span class="detail-key">Коммуникации</span>
+    <span class="detail-line"></span>
+    <span class="detail-value">готовые</span>
+  </div>
+  <div class="detail-item">
+    <span class="detail-key">Застройщик</span>
+    <span class="detail-line"></span>
+    <span class="detail-value">LANDJER</span>
+  </div>
+</div>
+
+        <div class="buttons">
+          <button class="btn-primary">Оставить заявку</button>
+          <button class="btn-secondary">Калькулятор рассрочки</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div id="footer-container" style="margin-top: 100px;"></div>
+
+  <script src="../load-header.js"></script>
+
+
+</body>
+</html>

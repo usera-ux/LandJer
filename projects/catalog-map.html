@@ -1,0 +1,717 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Каталог участков</title>
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+
+.header .nav-menu a:hover,
+.header .nav-menu a.active {
+  border-bottom: 2px solid black !important;
+}
+  body[lang="kk"] .logo{
+  margin-left: -10px;
+}
+body[lang="kk"] .nav-menu {
+  font-size: 20px !important;
+  margin-left: 100px;
+}
+.nav-menu{
+  margin-left: 100px;
+}
+.logo{
+  margin-left: -130px;
+}
+.catalog {
+  padding: 50px 20px;
+  margin-top: 100px;
+  font-family: "Montserrat", sans-serif;
+}
+
+.land-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  max-width: 1800px;
+  margin: 0 auto;
+  margin-left: -20px;
+  margin-top: -100px;
+}
+
+.land-card-grid {
+  background: #f9f9f7;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+   position: relative; 
+}
+
+.land-card-grid:hover {
+  transform: translateY(-4px);
+}
+
+.status {
+  position:absolute;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: white;
+  z-index: 10;
+
+}
+
+.status-free {
+  background: #A5C05B;
+}
+
+
+.land-card-grid.status-sold {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.land-card-grid.status-sold .card-content {
+  opacity: 0.9;
+}
+
+.land-card-grid.status-sold img {
+  filter: brightness(0.85) saturate(0.9);
+}
+
+.land-card-grid.status-sold::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.4); 
+  z-index: 5;
+  pointer-events: none;
+}
+
+.land-card-grid img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: 16px 16px 0 0;
+}
+
+.card-content {
+  padding: 1.5rem;
+  text-align: left;
+}
+
+.card-content h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  line-height: 1.4;
+  font-weight: 600;
+  color: #222;
+}
+
+.price {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin: 0.5rem 0;
+  color: #222;
+}
+
+.specs {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.spec-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.3rem 0;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px dotted #ccc;
+}
+
+.spec-row:last-child {
+  border-bottom: none;
+}
+
+.spec-row span:first-child {
+  font-weight: 500;
+  min-width: 100px;
+}
+
+.catalog-page {
+  padding: 4rem 2rem;
+  min-height: 100vh;
+  margin-top: 100px;
+}
+
+.breadcrumb {
+  font-size: 0.8rem;
+  color: #666;
+  margin-bottom: 1.5rem;
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.breadcrumb a {
+  color: #666;
+  text-decoration: none;
+}
+
+.breadcrumb a:hover {
+  text-decoration: underline;
+}
+
+.breadcrumb span {
+  color: #666;
+}
+
+.catalog-title {
+  font-size: 3rem; 
+  font-weight: 500; 
+  margin-bottom: 1.5rem;
+  color: #222;
+}
+.filter-bar {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding: 0.8rem 1.2rem;
+  border-radius: 12px;
+}
+
+.filter-wrapper {
+  position: relative;
+  width: 280px;
+}
+
+.filter-select {
+  width: 130%;
+  padding: 15px 16px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  appearance: none; 
+  cursor: pointer;
+  outline: none;
+  margin-left: -20px;
+  transition: border-color 0.2s;
+  background-color: rgba(255, 255, 255, 0.426);
+}
+
+.filter-select:hover,
+.filter-select:focus {
+  border-color: #d4d4d4;
+}
+
+
+.filter-wrapper::after {
+  content: "▼";
+  font-size: 0.6rem;
+  color: #777;
+  position: absolute;
+  top: 50%;
+  margin-left: 114%;
+  transform: translateY(-50%);
+  pointer-events: none;
+  
+}
+
+.view-toggle {
+  display: inline-flex;
+  background: #f0f0f043;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #b6b6b64e;
+  margin-left: 50px;
+}
+
+.view-btn {
+  padding: 15px 20px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #555;
+  transition: all 0.2s ease;
+  min-width: 140px;
+  text-align: center;
+}
+
+.view-btn.active {
+  background: #1a3d1a;
+  color: white;
+  border-radius: 15px;
+  font-weight: 500;
+  box-shadow: inset 0 1px 2px rgba(0,0,0,0.1);
+}
+
+.view-btn:hover:not(.active) {
+  background: #e8e8e8;
+}
+.map-image {
+  width: 100%;
+  height: 80%;
+  object-fit: cover;
+}
+    .top-bar {
+      background-color: #ECECEC;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+      position: relative;
+      z-index: 10;
+  
+  
+    }
+    .top-bar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background-color: #ECECEC;
+      border-bottom-left-radius: 50% 40px;
+      border-bottom-right-radius: 50% 40px;
+      transform: translateY(1px);
+      z-index: -1;
+    }
+
+    .contact-info {
+      color: #666;
+      font-size: 14px;
+      padding: 0 15px;
+      border-right: 1px solid #ccc;
+    }
+
+    .contact-info:last-child {
+      border-right: none;
+      padding-right: 20px;
+    }
+  
+    .contact-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 50px;
+      background-color: #F0F0F0;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 250px;
+      height: 100px;
+      margin-left: -78px;
+    }
+
+    .contact-text {
+      margin: 0 40px;
+      text-align: start;
+      width: 380px;
+      margin-left: 370px;
+      margin-top: 15px;
+    }
+
+    .contact-text h2 {
+      font-size: 33px;
+      color: #151515;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+    }
+
+    .contact-text p {
+      font-size: 17px;
+      color: #666;
+      margin: 0;
+    }
+
+    .contact-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+    }
+
+    .whatsapp-button img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .submit-button {
+      background-color: #2e5a3d;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 20px 30px;
+      width: 240px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #254a32;
+    }
+
+    .arrow-image {
+      position: absolute;
+      bottom: 10px;
+      left: 72%;
+      transform: translateX(-50%);
+      height: 33px;
+      z-index: 100;
+    }
+
+    .dropdown-arrow {
+      background: #f4f5ee;
+      border: none;
+      border-radius: 20px;
+      width: 45px;
+      height: 45px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-top: -40px;
+    }
+
+    .dropdown-arrow img {
+      width: 20px;
+      height: auto;
+    }
+    .footer_line{
+      color: #828282;
+      margin-top: 20px;
+      margin-left: 20px;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .logo-container {
+        margin-bottom: 20px;
+      }
+
+      .contact-text {
+        margin: 20px 0;
+        margin-left: 0;
+        width: auto;
+        text-align: center;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .submit-button {
+        width: 100%;
+      }
+
+      .arrow-image {
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 20px;
+      }
+    }
+  header .nav-menu ,
+.header .lang-toggle {
+  color: black !important;
+}
+
+/* На мобильных — белый */
+@media (max-width: 768px) {
+  .header .nav-menu ,
+  .header .lang-toggle {
+    color: white !important;
+  }
+}
+  </style>
+</head>
+<body>
+<body>
+
+<div class="header">
+  <div class="logo" >
+    <img src="/images/black_logo.png" alt="LANDJER Logo">
+  </div>
+
+  <!-- Burger button (visible only on mobile) -->
+  
+  <button class="burger-menu" aria-label="Toggle menu">
+    <span></span>
+    <span></span>
+    <span></span>
+  </button>
+
+ <div class="nav-menu" style="background-color: rgba(255, 255, 255, 0.275);">
+        <a href="../index.html" class="active" style="color: black;" data-lang="nav-about">О нас</a>
+        <a href="#"  style="color: black;" data-lang="nav-why-kosshy">Почему КОСШЫ</a>
+        <a href="../projects/sayjai.html"  style="color: black;" data-lang="nav-projects">Проекты</a>
+        <a href="#"  style="color: black;" data-lang="nav-terms">Условия</a>
+        <a href="../projects/catalog-map.html"  style="color: black;" data-lang="nav-catalog">Каталог</a>
+        <a href="../projects/lawer.html"  style="color: black;" data-lang="nav-trusted">Нам доверяют</a>
+        <a href="#"  style="color: black;" data-lang="nav-reviews">Отзывы</a>
+        <a href="#"  style="color: black;" data-lang="nav-faq">FAQ</a>
+        <a href="#"  style="color: black;" data-lang="nav-blog">Блог</a>
+        <a href="#"  style="color: black;" data-lang="nav-contacts">Контакты</a>
+</div>
+
+  <div class="lang-toggle" >Ру ▾</div>
+</div>
+
+
+
+  <section class="catalog-page">
+    <div class="breadcrumb">
+      <a href="../index.html">Главная</a> / 
+      <span>Каталог участков</span>
+    </div>
+
+    <h1 class="catalog-title">Каталог участков</h1>
+
+  <div class="filter-bar">
+  <div class="filter-wrapper">
+    <select class="filter-select">
+      <option>По возрастанию цены</option>
+      <option>По убыванию цены</option>
+      <option>По размеру участка</option>
+    </select>
+  </div>
+
+  <div class="view-toggle">
+    <button class="view-btn active" data-view="map">Карта</button>
+    <button class="view-btn" data-view="list">Списком</button>
+  </div>
+</div>
+
+
+    <div id="map-view" >
+      <img src="../images/catalog-map.png" alt="Карта участков" class="map-image">
+    </div>
+
+    <div id="list-view" class="catalog" style="display: none;">
+  <div class="land-grid">
+
+  <a href="land-detail.html?land=1" class="land-card-grid-link">
+    <div class="land-card-grid">
+      <div class="status status-free">Свободно</div>
+      <img src="../images/catalog.png" alt="Участок 1 га">
+      <div class="card-content">
+        <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+        <p class="price">от 4,3 млн ₸</p>
+        <div class="specs">
+          <div class="spec-row">
+            <span>Размер</span>
+            <span>8-10 соток</span>
+          </div>
+          <div class="spec-row">
+            <span>Коммуникации</span>
+            <span>готовые</span>
+          </div>
+          <div class="spec-row">
+            <span>Блок</span>
+            <span>4 блок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</a>
+  
+  <a href="land-detail.html?land=1" class="land-card-grid-link">
+    <div class="land-card-grid status-sold">
+      <div class="status status-sold">Продано</div>
+      <img src="../images/catalog.png" alt="Участок 1 га">
+      <div class="card-content">
+        <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+        <p class="price">от 4,3 млн ₸</p>
+        <div class="specs">
+          <div class="spec-row">
+            <span>Размер</span>
+            <span>8-10 соток</span>
+          </div>
+          <div class="spec-row">
+            <span>Коммуникации</span>
+            <span>готовые</span>
+          </div>
+          <div class="spec-row">
+            <span>Блок</span>
+            <span>4 блок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="land-detail.html?land=1" class="land-card-grid-link">  
+    <div class="land-card-grid">
+      <div class="status status-free">Свободно</div>
+      <img src="../images/catalog.png" alt="Участок 1 га">
+      <div class="card-content">
+        <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+        <p class="price">от 4,3 млн ₸</p>
+        <div class="specs">
+          <div class="spec-row">
+            <span>Размер</span>
+            <span>8-10 соток</span>
+          </div>
+          <div class="spec-row">
+            <span>Коммуникации</span>
+            <span>готовые</span>
+          </div>
+          <div class="spec-row">
+            <span>Блок</span>
+            <span>4 блок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="land-detail.html?land=1" class="land-card-grid-link">
+    <div class="land-card-grid">
+      <div class="status status-free">Свободно</div>
+      <img src="../images/catalog.png" alt="Участок 1 га">
+      <div class="card-content">
+        <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+        <p class="price">от 4,3 млн ₸</p>
+        <div class="specs">
+          <div class="spec-row">
+            <span>Размер</span>
+            <span>8-10 соток</span>
+          </div>
+          <div class="spec-row">
+            <span>Коммуникации</span>
+            <span>готовые</span>
+          </div>
+          <div class="spec-row">
+            <span>Блок</span>
+            <span>4 блок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </a>
+  <a href="land-detail.html?land=1" class="land-card-grid-link">
+    <div class="land-card-grid">
+      <div class="status status-free">Свободно</div>
+      <img src="../images/catalog.png" alt="Участок 1 га">
+      <div class="card-content">
+        <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+        <p class="price">от 4,3 млн ₸</p>
+        <div class="specs">
+          <div class="spec-row">
+            <span>Размер</span>
+            <span>8-10 соток</span>
+          </div>
+          <div class="spec-row">
+            <span>Коммуникации</span>
+            <span>готовые</span>
+          </div>
+          <div class="spec-row">
+            <span>Блок</span>
+            <span>4 блок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+</a>
+<a href="land-detail.html?land=1" class="land-card-grid-link">
+    <div class="land-card-grid status-sold">
+      <div class="status status-sold">Продано</div>
+      <img src="../images/catalog.png" alt="Участок 1 га">
+      <div class="card-content">
+        <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+        <p class="price">от 4,3 млн ₸</p>
+        <div class="specs">
+          <div class="spec-row">
+            <span>Размер</span>
+            <span>8-10 соток</span>
+          </div>
+          <div class="spec-row">
+            <span>Коммуникации</span>
+            <span>готовые</span>
+          </div>
+          <div class="spec-row">
+            <span>Блок</span>
+            <span>4 блок</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</a>
+
+  </section>
+
+  <div class="top-bar" id="topBar">
+    <div class="contact-info">WHATSAPP: +7 (700) 740-14-14</div>
+    <div class="contact-info">ОТДЕЛ ПРОДАЖ: +7 (700) 740-14-14</div>
+    <div class="contact-info">г.Астана, Есильский р-н, Коргалжынское шоссе, участок 86</div>
+    <button class="dropdown-arrow" >
+      <img src="../images/arrow.png" id="toggleTopBarBtn"   alt="Скрыть панель" />
+    </button>
+  </div>
+
+  <!-- Основная секция -->
+  <div class="contact-section">
+    <div class="logo-container">
+      <img src="../images/black_logo.png" alt="Landjer Logo" class="logo" />
+    </div>
+
+    <div class="contact-text">
+      <h2>Свяжитесь с нами</h2>
+      <p>Оставьте свои данные и мы перезвоним вам в ближайшее рабочее время.</p>
+    </div>
+
+    <!-- Стрелка-указатель -->
+    <img src="../images/footer_line.png" alt="Стрелка" class="arrow-image" />
+
+    <div class="contact-buttons">
+      <a href="#" class="whatsapp-button">
+        <img src="../images/footer_whatsapp.png" alt="WhatsApp" />
+      </a>
+      <button class="submit-button">Оставить заявку</button>
+    </div>
+  </div>
+  <hr style="border: 1px solid rgb(160, 159, 159); margin-top: 20px;width: 98%;margin-left: 1%;">
+  <div>
+    <h3 class="footer_line">ABC DESIGN</h3>
+  </div>
+
+  <div id="footer-container" style="margin-top: 100px;"></div>
+<script src="../script.js"></script>
+<script src="../load-header.js"></script>
+
+  
+
+</body>
+</html>

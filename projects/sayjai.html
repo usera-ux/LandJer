@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Зона отдыха «Саяжай»</title>
+  <link rel="stylesheet" href="../header.css">
+  <link rel="stylesheet" href="../style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <style>
+    body[lang="kk"] .nav-menu {
+  font-size: 20px !important;
+  margin-left: -90px;
+}
+  body[lang="kk"] .logo{
+  margin-left: 120px;
+}
+body[lang="kk"] .nav-menu {
+  font-size: 20px !important;
+  margin-left: 30px;
+}
+.nav-menu{
+  margin-left: 100px;
+}
+.logo{
+  margin-left: 10px;
+}
+
+    .project-page {
+      padding: 4rem 2rem;
+      min-height: 100vh;
+      margin-top: 100px;
+      
+    }
+
+    .breadcrumb {
+      font-size: 0.9rem;
+      color: #666;
+      margin-top: 50px;
+      margin-bottom: 1.5rem;
+    }
+
+    .breadcrumb a {
+      color: #333;
+      text-decoration: none;
+    }
+
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .project-title {
+      font-size: 2.5rem;
+      font-weight: 600;
+      margin-bottom: 2rem;
+      color: #222;
+      margin-top: 50px;
+    }
+    .gallery {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-top: 2rem;
+}
+
+.gallery-item {
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  background: #fff;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+.top-row {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr; 
+  gap: 1.5rem;
+}
+
+.top-row .wide {
+  aspect-ratio: 16 / 9; 
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+.top-row .square {
+  aspect-ratio: 1 / 1.1;
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+}
+
+.bottom-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.5rem;
+}
+
+.bottom-row .square {
+  aspect-ratio: 1 / 1.2; 
+  box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.12);
+
+}
+
+/* Цвет текста в хедере — чёрный по умолчанию */
+.header .nav-menu ,
+.header .lang-toggle {
+  color: black !important;
+}
+
+/* На мобильных — белый */
+@media (max-width: 768px) {
+  .header .nav-menu a,
+  .header .lang-toggle {
+    color: white !important;
+  }
+}
+@media (max-width: 900px) {
+  .top-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .top-row .wide {
+    grid-column: span 2;
+  }
+
+  .bottom-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .top-row,
+  .bottom-row {
+    grid-template-columns: 1fr;
+  }
+
+  .top-row .wide {
+    grid-column: auto;
+  }
+}
+    .top-bar {
+      background-color: #ECECEC;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 18px 20px;
+      position: relative;
+      z-index: 10;
+  
+  
+    }
+    .top-bar::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 20px;
+      background-color: #ECECEC;
+      border-bottom-left-radius: 50% 40px;
+      border-bottom-right-radius: 50% 40px;
+      transform: translateY(1px);
+      z-index: -1;
+    }
+
+    .contact-info {
+      color: #666;
+      font-size: 14px;
+      padding: 0 15px;
+      border-right: 1px solid #ccc;
+    }
+
+    .contact-info:last-child {
+      border-right: none;
+      padding-right: 20px;
+    }
+  
+    .contact-section {
+      display: flex;
+      justify-content: space-around;
+      padding: 50px 50px;
+      background-color: #F0F0F0;
+      border-bottom: 1px solid #ddd;
+      position: relative;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 250px;
+      height: 100px;
+      margin-left: -78px;
+    }
+
+    .contact-text {
+      margin: 0 40px;
+      text-align: start;
+      width: 380px;
+      margin-left: 370px;
+      margin-top: 15px;
+    }
+
+    .contact-text h2 {
+      font-size: 33px;
+      color: #151515;
+      font-weight: 500;
+      margin: 0 0 10px 0;
+    }
+
+    .contact-text p {
+      font-size: 17px;
+      color: #666;
+      margin: 0;
+    }
+
+    .contact-buttons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      position: relative;
+    }
+
+    .whatsapp-button img {
+      width: 60px;
+      height: 60px;
+    }
+
+    .submit-button {
+      background-color: #2e5a3d;
+      color: white;
+      border: none;
+      border-radius: 50px;
+      padding: 20px 30px;
+      width: 240px;
+      font-size: 18px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .submit-button:hover {
+      background-color: #254a32;
+    }
+
+    .arrow-image {
+      position: absolute;
+      bottom: 10px;
+      left: 72%;
+      transform: translateX(-50%);
+      height: 33px;
+      z-index: 100;
+    }
+
+    .dropdown-arrow {
+      background: #f4f5ee;
+      border: none;
+      border-radius: 20px;
+      width: 45px;
+      height: 45px;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      margin-top: -10px;
+    }
+
+    .dropdown-arrow img {
+      width: 20px;
+      height: auto;
+    }
+    .footer_line{
+      color: #828282;
+      margin-top: 20px;
+      margin-left: 20px;
+      font-weight: 400;
+      font-size: 15px;
+    }
+
+    /* Адаптивность */
+    @media (max-width: 768px) {
+      .contact-section {
+        flex-direction: column;
+        padding: 20px;
+      }
+
+      .logo-container {
+        margin-bottom: 20px;
+      }
+
+      .contact-text {
+        margin: 20px 0;
+        margin-left: 0;
+        width: auto;
+        text-align: center;
+      }
+
+      .contact-buttons {
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .submit-button {
+        width: 100%;
+      }
+
+      .arrow-image {
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 20px;
+      }
+    }
+
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+    <div class="header">
+      <div class="logo">
+        <img src="/images/black_logo.png" style="margin-left: -20px;" alt="LANDJER Logo">
+      </div>
+
+      <div class="nav-menu" style="background-color: rgba(255, 255, 255, 0.275);">
+        <a href="../index.html" class="active" style="color: black;" data-lang="nav-about">О нас</a>
+        <a href="#"  style="color: black;" data-lang="nav-why-kosshy">Почему КОСШЫ</a>
+        <a href="../projects/sayjai.html"  style="color: black;" data-lang="nav-projects">Проекты</a>
+        <a href="#"  style="color: black;" data-lang="nav-terms">Условия</a>
+        <a href="../projects/catalog-map.html"  style="color: black;" data-lang="nav-catalog">Каталог</a>
+        <a href="../projects/lawer.html"  style="color: black;" data-lang="nav-trusted">Нам доверяют</a>
+        <a href="#"  style="color: black;" data-lang="nav-reviews">Отзывы</a>
+        <a href="#"  style="color: black;" data-lang="nav-faq">FAQ</a>
+        <a href="#"  style="color: black;" data-lang="nav-blog">Блог</a>
+        <a href="#"  style="color: black;" data-lang="nav-contacts">Контакты</a>
+</div>
+
+      <div class="lang-toggle" style="color: black;">Ру ▾</div>
+    </div>
+
+
+
+  <section class="project-page">
+    <div class="breadcrumb">
+      <a href="../index.html">Главная</a> / 
+      <a href="../index.html#projects">Реализованные проекты</a> / 
+      <span>Саяжай</span>
+    </div>
+
+    <h1 class="project-title">Зона отдыха «Саяжай»</h1>
+
+<div class="gallery">
+  <div class="gallery-row top-row">
+    <div class="gallery-item wide"><img src="../images/sayajai1.png" alt=""></div>
+    <div class="gallery-item square"><img src="../images/sayajai2.png" alt=""></div>
+    <div class="gallery-item square"><img src="../images/sayajai3.png" alt=""></div>
+  </div>
+  <div class="gallery-row bottom-row">
+    <div class="gallery-item square"><img src="../images/sayajai4.png" alt=""></div>
+    <div class="gallery-item square"><img src="../images/sayajai5.png" alt=""></div>
+    <div class="gallery-item square"><img src="../images/sayajai6.png" alt=""></div>
+    <div class="gallery-item square"><img src="../images/sayajai7.png" alt=""></div>
+  </div>
+</div>
+ 
+
+
+  </section>
+<div class="contact-section">
+    <div class="logo-container">
+      <img src="../images/black_logo.png" alt="Landjer Logo" class="logo" />
+    </div>
+
+    <div class="contact-text">
+      <h2>Свяжитесь с нами</h2>
+      <p>Оставьте свои данные и мы перезвоним вам в ближайшее рабочее время.</p>
+    </div>
+
+    <!-- Стрелка-указатель -->
+    <img src="../images/footer_line.png" alt="Стрелка" class="arrow-image" />
+
+    <div class="contact-buttons">
+      <a href="#" class="whatsapp-button">
+        <img src="../images/footer_whatsapp.png" alt="WhatsApp" />
+      </a>
+      <button class="submit-button">Оставить заявку</button>
+    </div>
+  </div>
+  <hr style="border: 1px solid rgb(160, 159, 159); margin-top: 20px;width: 98%;margin-left: 1%;">
+  <div>
+    <h3 class="footer_line">ABC DESIGN</h3>
+  </div>
+  <div id="footer-container" style="margin-top: 100px;"></div>
+
+  <script src="../load-header.js"></script>
+
+
+</body>
+</html>
