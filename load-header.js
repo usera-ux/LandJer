@@ -237,4 +237,16 @@ if (burger && navMenu) {
       });
     }
   }
+  const toggleBtn = document.getElementById('toggleTopBarBtn');
+const topBar = document.querySelector('.footer-top-bar');
+
+if (toggleBtn && topBar) {
+  toggleBtn.addEventListener('click', function () {
+    topBar.classList.toggle('hidden');
+    const arrowImg = toggleBtn.querySelector('img');
+    if (arrowImg) {
+      arrowImg.classList.toggle('rotated');
+    }
+  });
+}
 });

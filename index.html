@@ -1,83 +1,82 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>LandJer</title>
-  <link rel="stylesheet" href="header.css">
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="./header.css">
- <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./testpage.css">
 </head>
 <body>
- <!-- Header -->
+
 <div class="header">
-  <div class="logo">
-    <img src="./images/logo.png" style="margin-left: -20px;" alt="LANDJE Logo">
+  <img src="../images/logo.png" alt="LANDJER" class="logo-img">
+
+  <!-- БУРГЕР МЕНЮ -->
+   <div class="burger-icon">
+    <span></span>
+    <span></span>
+    <span></span>
   </div>
+    <div class="nav-menu">
+      <a href="#" class="nav-item active">О нас</a>
+      <a href="#" class="nav-item">Почему КОСШЫ</a>
+      <a href="./projects/sayjai.html" class="nav-item">Проекты</a>
+      <a href="#" class="nav-item">Условия</a>
+      <a href="./projects/catalog-map.html" class="nav-item">Каталог</a>
+      <a href="./projects/lawer.html" class="nav-item">Нам доверяют</a>
+      <a href="#" class="nav-item">Отзывы</a>
+      <a href="#" class="nav-item">FAQ</a>
+      <a href="#" class="nav-item">Блог</a>
+      <a href="#" class="nav-item">Контакты</a>
+    </div>
+  
 
-  <button class="burger-menu" aria-label="Toggle menu">
-    <span></span>
-    <span></span>
-    <span></span>
-  </button>
-
-  <div class="nav-menu" id="navMenu">
-    <a href="#" class="active" data-lang="nav-about">О нас</a>
-    <a href="#" data-lang="nav-why-kosshy">Почему КОСШЫ</a>
-    <a href="./projects/sayjai.html" data-lang="nav-projects">Проекты</a>
-    <a href="#" data-lang="nav-terms">Условия</a>
-    <a href="./projects/catalog-map.html" data-lang="nav-catalog">Каталог</a>
-    <a href="./projects/lawer.html" data-lang="nav-trusted">Нам доверяют</a>
-    <a href="#" data-lang="nav-reviews">Отзывы</a>
-    <a href="#" data-lang="nav-faq">FAQ</a>
-    <a href="#" data-lang="nav-blog">Блог</a>
-    <a href="#" data-lang="nav-contacts">Контакты</a>
+  <div class="lang-selector">
+    Ru ▾
   </div>
-
-  <div class="lang-toggle">Ру ▾</div>
 </div>
 
+  <!-- HERO — ПЕРЕДЕЛАН ТОЧНО ПО РЕФЕРЕНСУ -->
   <section class="hero">
     <video autoplay muted loop playsinline preload="auto" class="hero-video">
-      <source src="./images/ланжер.mp4" type="video/mp4">
+      <source src="../images/ланжер.mp4" type="video/mp4">
     </video>
     <div class="hero-overlay"></div>
 
-    <div class="hero-content-left">
-      <h1 data-lang="hero-title">Земельные участки<br><span>15 минут от центра Астаны</span></h1>
-     <h3 data-lang="hero-subtitle">участки в городе Косшы<br>от 4,5 млн/ за 8 соток</h3>
-     <p data-lang="hero-desc">Земля – с давних времен является признаком богатства, достатка, стабильности.<br><br>В современном мире ценность собственных участков высока, как никогда. Земля в собственности – ваш гарант безопасности, спокойствия, стабильности, надежности, семейного благополучия</p>
-    </div>
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1>Земельные участки,<br><span>15 минут от центра <br> Астаны</span></h1>
+        <h3>участки в городе Косшы<br>от 4,5 млн/ за 8 соток</h3>
+        <p>
+          Земля – с давних времен является признаком богатства, достатка, стабильности.<br><br>
+          В современном мире ценность собственных участков высока, как никогда. Земля в собственности – ваш гарант безопасности, спокойствия, стабильности, надежности, семейного благополучия
+        </p>
+      </div>
 
- 
-    <div class="hero-content-right">
-      <div class="stat-item">
-        <div class="stat-number">15–20 минут</div>
-        <div class="stat-label" data-lang="stat1-label">езды до столицы</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">14 Га</div>
-        <div class="stat-label" data-lang="stat2-label">продано земельных <br> участков под ИЖС</div>
-      </div>
-      <div class="stat-item">
-        <div class="stat-number">10 Га</div>
-        <div class="stat-label" data-lang="stat3-label">продано участков <br>под коммерцию</div>
+      <div class="hero-stats">
+        <div class="stat-item">
+          <div class="stat-number">15–20 минут</div>
+          <div class="stat-label">езды до столицы</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">14 Га</div>
+          <div class="stat-label">продано земельных участков под ИЖС</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">10 Га</div>
+          <div class="stat-label">продано участков под коммерцию</div>
+        </div>
       </div>
     </div>
-
-   
   </section>
-  
-   <div class="contact">
-      <img src="./images/phone.png"  class="phone" alt="">
-      <img src="./images/whatsapp.png" class="whatsapp" alt="">
-    </div>
 
- 
-<section class="main">
+  <!-- CONTACTS — В ПРАВОМ НИЖНЕМ УГЛУ -->
+  <div class="contact">
+    <a href="tel:+77000000000"><img src="../images/phone.png" class="phone" alt="Позвонить"></a>
+    <a href="https://wa.me/77000000000"><img src="../images/whatsapp.png" class="whatsapp" alt="WhatsApp"></a>
+  </div>
+
+
+  <section class="main">
   <div class="about">
     <h1 data-lang="about-title">О компании</h1>
     <p class="desc" data-lang="about-desc1">У нас 10-летний опыт в продаже земель любого целевого назначения, приобретены в собственность десятки гектар и проданы более 1 000 участков <br> К каждому участку подведено электричество.</p>
@@ -88,248 +87,201 @@
 <section class="why-kosshy">
   <div class="slider-container">
     <!-- Слайды -->
-    <div class="slides"> 
-         <!-- Слайд1-->
-      <div class="slide active" style="background-image: url('./images/about.png');">
+    <div class="slides">
+      <!-- Слайд 1 -->
+      <div class="slide" style="background-image: url('../images/about.png');">
         <div class="slide-content">
-          <h3 data-lang="why-kosshy-title">Почему КОСШЫ</h3>
-         <h2 data-lang="why-kosshy-subtitle">Близость к Астане</h2>
-          <p data-lang="why-kosshy-desc">Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
-           <!-- Индикаторы -->
-              <div class="dots">
-                 <span class="dot active" data-slide="0"></span>
-                 <span class="dot" data-slide="1"></span>
-                 <span class="dot" data-slide="2"></span>
-                 <span class="dot" data-slide="3"></span>
-                 <span class="dot" data-slide="4"></span>
-                 <span class="dot" data-slide="5"></span>
-              </div>
+          <h3>Почему КОСШЫ</h3>
+          <h2>Близость к Астане</h2>
+          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
         </div>
+      </div>
+
+      <!-- Слайд 2 -->
+      <div class="slide" style="background-image: url('../images/about.png');">
+        <div class="slide-content">
+          <h3>Почему КОСШЫ</h3>
+          <h2>Близость к Астане</h2>
+           <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
+        </div>
+      </div>
+
+      <!-- Слайд 3 -->
+      <div class="slide" style="background-image: url('../images/about.png');">
+        <div class="slide-content">
+          <h3>Почему КОСШЫ</h3>
+          <h2>Близость к Астане</h2>
+          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
+        </div>
+      </div>
+
+      <!-- Слайд 4 -->
+      <div class="slide" style="background-image: url('../images/about.png');">
+        <div class="slide-content">
+          <h3>Почему КОСШЫ</h3>
+          <h2>Близость к Астане</h2>
+         <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
+        </div>
+      </div>
+
+      <!-- Слайд 5 -->
+      <div class="slide" style="background-image: url('../images/about.png');">
+        <div class="slide-content">
+          <h3>Почему КОСШЫ</h3>
+          <h2>Близость к Астане</h2>
+           <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
+        </div>
+      </div>
+
+      <!-- Слайд 6 -->
+      <div class="slide" style="background-image: url('../images/about.png');">
+        <div class="slide-content">
+          <h3>Почему КОСШЫ</h3>
+          <h2>Близость к Астане</h2>
+         <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
+        </div>
+      </div>
     </div>
-        <!-- Слайд2 -->
-      <div class="slide active" style="background-image: url('./images/about.png');">
-        <div class="slide-content">
-          <h3>Почему КОСШЫ</h3>
-          <h2>Близость к Астане</h2>
-          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
-           <!-- Индикаторы -->
-              <div class="dots">
-                 <span class="dot active" data-slide="0"></span>
-                 <span class="dot" data-slide="1"></span>
-                 <span class="dot" data-slide="2"></span>
-                 <span class="dot" data-slide="3"></span>
-                 <span class="dot" data-slide="4"></span>
-                 <span class="dot" data-slide="5"></span>
-              </div>
-        </div>
-    </div>   
-     <!-- Слайд3 -->
-      <div class="slide active" style="background-image: url('./images/about.png');">
-        <div class="slide-content">
-          <h3>Почему КОСШЫ</h3>
-          <h2>Близость к Астане</h2>
-          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
-           <!-- Индикаторы -->
-              <div class="dots">
-                 <span class="dot active" data-slide="0"></span>
-                 <span class="dot" data-slide="1"></span>
-                 <span class="dot" data-slide="2"></span>
-                 <span class="dot" data-slide="3"></span>
-                 <span class="dot" data-slide="4"></span>
-                 <span class="dot" data-slide="5"></span>
-              </div>
-        </div>
-    </div>  
-      <!-- Слайд4 -->
-      <div class="slide active" style="background-image: url('./images/about.png');">
-        <div class="slide-content">
-          <h3>Почему КОСШЫ</h3>
-          <h2>Близость к Астане</h2>
-          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
-           <!-- Индикаторы -->
-              <div class="dots">
-                 <span class="dot active" data-slide="0"></span>
-                 <span class="dot" data-slide="1"></span>
-                 <span class="dot" data-slide="2"></span>
-                 <span class="dot" data-slide="3"></span>
-                 <span class="dot" data-slide="4"></span>
-                 <span class="dot" data-slide="5"></span>
-              </div>
-        </div>
-    </div>
-        <!-- Слайд5-->
-      <div class="slide active" style="background-image: url('./images/about.png');">
-        <div class="slide-content">
-          <h3>Почему КОСШЫ</h3>
-          <h2>Близость к Астане</h2>
-          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
-           <!-- Индикаторы -->
-              <div class="dots">
-                 <span class="dot active" data-slide="0"></span>
-                 <span class="dot" data-slide="1"></span>
-                 <span class="dot" data-slide="2"></span>
-                 <span class="dot" data-slide="3"></span>
-                 <span class="dot" data-slide="4"></span>
-                 <span class="dot" data-slide="5"></span>
-              </div>
-        </div>
-    </div>
-        <!-- Слайд6-->
-      <div class="slide active" style="background-image: url('./images/about.png');">
-        <div class="slide-content">
-          <h3>Почему КОСШЫ</h3>
-          <h2>Близость к Астане</h2>
-          <p>Всего 15–20 минут езды до столицы. Можно жить в тишине и свежем воздухе, но при этом работать и учиться в городе.</p>
-           <!-- Индикаторы -->
-              <div class="dots">
-                 <span class="dot active" data-slide="0"></span>
-                 <span class="dot" data-slide="1"></span>
-                 <span class="dot" data-slide="2"></span>
-                 <span class="dot" data-slide="3"></span>
-                 <span class="dot" data-slide="4"></span>
-                 <span class="dot" data-slide="5"></span>
-              </div>
-        </div>
-    </div>
+
+    <!-- Индикаторы -->
+    <div class="dots">
+      <span class="dot" data-slide="0"></span>
+      <span class="dot" data-slide="1"></span>
+      <span class="dot" data-slide="2"></span>
+      <span class="dot" data-slide="3"></span>
+      <span class="dot" data-slide="4"></span>
+      <span class="dot" data-slide="5"></span>
     </div>
   </div>
 </section>
 
-
-
-<section class="projects" id="projects">
-<h1 data-lang="projects-title">Реализованные проекты</h1>
 
 <section class="projects-grid">
-  <div class="project-cards">
-<div class="project-cards">
-  <!-- Карточка 1 -->
-  <div class="project-card" data-project="sayjai">
-   <a href="projects/sayjai.html">
-    <img src="./images/sayajai.png" alt="Саяжай">
-    <div class="card-info">
-      <h3>САЯЖАЙ</h3>
-    </div>
-  </a>
-    <div class="card-info">
-      <h3>САЯЖАЙ</h3>
-    </div>
-    <div class="project-popup">
-      <div class="popup-info">
-        <h3>САЯЖАЙ</h3>
-        <p>от 15 млн ₸</p>
-        <p>г. Косшы, ул. Новая, 10/5</p>
-        <p>280 квартир в продаже</p>
-        <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+  <div class="projects-container">
+    <h1>Реализованные проекты</h1>
+    <div class="project-cards-wrapper">
+      <div class="project-cards">
+        <!-- Карточка 1 -->
+        <div class="project-card" data-project="sayjai">
+          <a href="/projects/sayjai.html">
+            <img src="../images/sayajai.png" alt="Саяжай">
+            <div class="card-info">
+              <h3>САЯЖАЙ</h3>
+            </div>
+          </a>
+          <div class="project-popup">
+            <div class="popup-info">
+              <h3>САЯЖАЙ</h3>
+              <p>от 15 млн ₸</p>
+              <p>г. Косшы, ул. Новая, 10/5</p>
+              <p>280 квартир в продаже</p>
+              <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 2 -->
+        <div class="project-card" data-project="alpamys">
+          <a href="#">
+            <img src="../images/alpamys.png" alt="Алпамыс">
+            <div class="card-info">
+              <h3>АЛПАМЫС</h3>
+            </div>
+          </a>
+          <div class="project-popup">
+            <div class="popup-info">
+              <h3>АЛПАМЫС</h3>
+              <p>от 15 млн ₸</p>
+              <p>г. Косшы, ул. Новая, 10/5</p>
+              <p>280 квартир в продаже</p>
+              <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="project-card" data-project="nura">
+          <a href="#">
+            <img src="../images/nyra.png" alt="Nura Apartments">
+            <div class="card-info">
+              <h3>NURA APARTMENTS</h3>
+            </div>
+          </a>
+          <div class="project-popup">
+            <div class="popup-info">
+              <h3>NURA APARTMENTS</h3>
+              <p>от 15 млн ₸</p>
+              <p>г. Косшы, ул. Новая, 10/5</p>
+              <p>280 квартир в продаже</p>
+              <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="project-card" data-project="new1">
+          <img src="../images/new1.png" alt="Новый проект 1">
+          <div class="card-info">
+            <h3>НОВЫЙ ПРОЕКТ 1</h3>
+          </div>
+          <div class="project-popup">
+            <div class="popup-info">
+              <h3>НОВЫЙ ПРОЕКТ 1</h3>
+              <p>от 18 млн ₸</p>
+              <p>г. Косшы, ул. Новая, 10/5</p>
+              <p>280 квартир в продаже</p>
+              <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 5 -->
+        <div class="project-card" data-project="new2">
+          <img src="../images/new2.png" alt="Новый проект 2">
+          <div class="card-info">
+            <h3>НОВЫЙ ПРОЕКТ 2</h3>
+          </div>
+          <div class="project-popup">
+            <div class="popup-info">
+              <h3>НОВЫЙ ПРОЕКТ 2</h3>
+              <p>от 18 млн ₸</p>
+              <p>г. Косшы, ул. Новая, 10/5</p>
+              <p>280 квартир в продаже</p>
+              <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 6 -->
+        <div class="project-card" data-project="new3">
+          <img src="../images/new3.png" alt="Новый проект 3">
+          <div class="card-info">
+            <h3>НОВЫЙ ПРОЕКТ 3</h3>
+          </div>
+          <div class="project-popup">
+            <div class="popup-info">
+              <h3>НОВЫЙ ПРОЕКТ 3</h3>
+              <p>от 18 млн ₸</p>
+              <p>г. Косшы, ул. Новая, 10/5</p>
+              <p>280 квартир в продаже</p>
+              <h4>Ближайшая сдача 2 кв. 2026 года</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-  </div>
 
-  <!-- Карточка 2 -->
-  <div class="project-card" data-project="alpamys">
-    <img src="./images/alpamys.png" alt="Алпамыс">
-    <a href="#">
-    <div class="card-info">
-      <h3>АЛПАМЫС</h3>
-    </div>
-    </a>
-    <div class="project-popup">
-      <div class="popup-info">
-        <h3>АЛПАМЫС</h3>
-        <p>от 15 млн ₸</p>
-        <p>г. Косшы, ул. Новая, 10/5</p>
-        <p>280 квартир в продаже</p>
-        <h4>Ближайшая сдача 2 кв. 2026 года</h4>
-      </div>
+    <!-- Индикаторы -->
+    <div class="dots2">
+      <span class="dot2 active" data-slide="0"></span>
+      <span class="dot2" data-slide="1"></span>
+      <span class="dot2" data-slide="2"></span>
     </div>
   </div>
-
-  <!-- Карточка 3 -->
-  <div class="project-card" data-project="nura">
-    <img src="./images/nyra.png" alt="Nura Apartments">
-    <a href="#">
-    <div class="card-info">
-      <h3>NURA APARTMENTS</h3>
-    </div>
-    </a>
-    <div class="project-popup">
-      <div class="popup-info">
-        <h3>NURA APARTMENTS</h3>
-        <p>от 15 млн ₸</p>
-        <p>г. Косшы, ул. Новая, 10/5</p>
-        <p>280 квартир в продаже</p>
-        <h4>Ближайшая сдача 2 кв. 2026 года</h4>
-      </div>
-    </div>
-  </div>
-
-  <!-- Карточка 4 -->
-  <div class="project-card" data-project="new1">
-    <img src="./images/new1.png" alt="Новый проект 1">
-    <div class="card-info">
-      <h3>НОВЫЙ ПРОЕКТ 1</h3>
-    </div>
-    <div class="project-popup">
-      <div class="popup-info">
-        <h3>НОВЫЙ ПРОЕКТ 1</h3>
-        <p>от 18 млн ₸</p>
-        <p>г. Косшы, ул. Новая, 10/5</p>
-        <p>280 квартир в продаже</p>
-        <h4>Ближайшая сдача 2 кв. 2026 года</h4>
-      </div>
-    </div>
-  </div>
-
-  <!-- Карточка 5 -->
-  <div class="project-card" data-project="new2">
-    <img src="./images/new2.png" alt="Новый проект 2">
-    <div class="card-info">
-      <h3>НОВЫЙ ПРОЕКТ 2</h3>
-    </div>
-    <div class="project-popup">
-      <div class="popup-info">
-        <h3>НОВЫЙ ПРОЕКТ 2</h3>
-        <p>от 18 млн ₸</p>
-        <p>г. Косшы, ул. Новая, 10/5</p>
-        <p>280 квартир в продаже</p>
-        <h4>Ближайшая сдача 2 кв. 2026 года</h4>
-      </div>
-    </div>
-  </div>
-
-  <!-- Карточка 6 -->
-  <div class="project-card" data-project="new3">
-    <img src="./images/new3.png" alt="Новый проект 3">
-    <div class="card-info">
-      <h3>НОВЫЙ ПРОЕКТ 3</h3>
-    </div>
-    <div class="project-popup">
-      <div class="popup-info">
-        <h3>НОВЫЙ ПРОЕКТ 3</h3>
-        <p>от 18 млн ₸</p>
-        <p>г. Косшы, ул. Новая, 10/5</p>
-        <p>280 квартир в продаже</p>
-        <h4>Ближайшая сдача 2 кв. 2026 года</h4>
-      </div>
-    </div>
-  </div>
-</div>
-
 </section>
 
-</div>
-  <div class="dots2">
-  <span class="dot2 active" data-slide="0"></span>
-  <span class="dot2 " data-slide="1"></span>
-  <span class="dot2 " data-slide="2"></span>
-  <span class="dot2 " data-slide="3"></span>
-  <span class="dot2 " data-slide="4"></span>
-  <span class="dot2 " data-slide="5"></span>
-</div>
-
-
 <div class="conditions">
-  <img src="./images/condition.png" width="750px" alt="">
+  <img src="../images/condition.png" width="750px" alt="">
   <div class="text_condition">
     <h1 data-lang="conditions-title">Условия приобретения</h1>
     <p data-lang="conditions-desc1">Это текст о компании. Он необходим для продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст. </p>
@@ -338,173 +290,167 @@
   </div>
 </div>
 
-
 <div class="catalog">
   <h1 data-lang="catalog-title">Каталог участков</h1>
   <section class="land-slides">
-  <div class="slider-container2">
-    <div class="slides2">
-      <!-- Карточка 1 -->
-       <a href="./projects/catalog-map.html" style="text-decoration: none; color: black;">
-      <div class="land-card">
-        <div class="status"  data-lang="land-status">Свободно</div>
-        <img src="./images/catalog.png" alt="Участок 1 га">
-        <div class="card-content">
-          <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
-          <p class="price">от 4,3 млн ₸</p>
-          <div class="specs">
-            <div class="spec-row">
-              <span data-lang="land-size">Размер</span>
-              <span>8-10 соток</span>
+    <div class="slider-container2">
+      <div class="slides2">
+        <!-- Карточка 1 -->
+        <a href="./projects/catalog-map.html" style="text-decoration: none; color: black;">
+          <div class="land-card">
+            <div class="status" data-lang="land-status">Свободно</div>
+            <img src="../images/catalog.png" alt="Участок 1 га">
+            <div class="card-content">
+              <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+              <p class="price">от 4,3 млн ₸</p>
+              <div class="specs">
+                <div class="spec-row">
+                  <span data-lang="land-size">Размер</span>
+                  <span>8-10 соток</span>
+                </div>
+                <div class="spec-row">
+                  <span data-lang="land-comms">Коммуникации</span>
+                  <span data-lang="land-ready">готовые</span>
+                </div>
+                <div class="spec-row">
+                  <span data-lang="land-block">Блок</span>
+                  <span>4 блок</span>
+                </div>
+              </div>
             </div>
-            <div class="spec-row">
-              <span>Коммуникации</span>
-              <span data-lang="land-ready">готовые</span>
+          </div>
+        </a>
+
+        <!-- Карточка 2 -->
+        <div class="land-card">
+          <div class="status" data-lang="land-status">Свободно</div>
+          <img src="../images/catalog.png" alt="Участок 1 га">
+          <div class="card-content">
+            <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+            <p class="price">от 4,3 млн ₸</p>
+            <div class="specs">
+              <div class="spec-row">
+                <span data-lang="land-size">Размер</span>
+                <span>8-10 соток</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-comms">Коммуникации</span>
+                <span data-lang="land-ready">готовые</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-block">Блок</span>
+                <span>4 блок</span>
+              </div>
             </div>
-            <div class="spec-row">
-              <span data-lang="land-block">Блок</span>
-              <span>4 блок</span>
+          </div>
+        </div>
+
+        <!-- Карточка 3 -->
+        <div class="land-card">
+          <div class="status" data-lang="land-status">Свободно</div>
+          <img src="../images/catalog.png" alt="Участок 1 га">
+          <div class="card-content">
+            <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+            <p class="price">от 4,3 млн ₸</p>
+            <div class="specs">
+              <div class="spec-row">
+                <span data-lang="land-size">Размер</span>
+                <span>8-10 соток</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-comms">Коммуникации</span>
+                <span data-lang="land-ready">готовые</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-block">Блок</span>
+                <span>4 блок</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 4 -->
+        <div class="land-card">
+          <div class="status" data-lang="land-status">Свободно</div>
+          <img src="../images/catalog.png" alt="Участок 1 га">
+          <div class="card-content">
+            <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+            <p class="price">от 4,3 млн ₸</p>
+            <div class="specs">
+              <div class="spec-row">
+                <span data-lang="land-size">Размер</span>
+                <span>8-10 соток</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-comms">Коммуникации</span>
+                <span data-lang="land-ready">готовые</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-block">Блок</span>
+                <span>4 блок</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 5 -->
+        <div class="land-card">
+          <div class="status" data-lang="land-status">Свободно</div>
+          <img src="../images/catalog.png" alt="Участок 1 га">
+          <div class="card-content">
+            <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+            <p class="price">от 4,3 млн ₸</p>
+            <div class="specs">
+              <div class="spec-row">
+                <span data-lang="land-size">Размер</span>
+                <span>8-10 соток</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-comms">Коммуникации</span>
+                <span data-lang="land-ready">готовые</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-block">Блок</span>
+                <span>4 блок</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Карточка 6 -->
+        <div class="land-card">
+          <div class="status" data-lang="land-status">Свободно</div>
+          <img src="../images/catalog.png" alt="Участок 1 га">
+          <div class="card-content">
+            <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
+            <p class="price">от 4,3 млн ₸</p>
+            <div class="specs">
+              <div class="spec-row">
+                <span data-lang="land-size">Размер</span>
+                <span>8-10 соток</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-comms">Коммуникации</span>
+                <span data-lang="land-ready">готовые</span>
+              </div>
+              <div class="spec-row">
+                <span data-lang="land-block">Блок</span>
+                <span>4 блок</span>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      </a>
 
-      <!-- Карточка 2 -->
-      <div class="land-card">
-        <div class="status"  data-lang="land-status">Свободно</div>
-        <img src="./images/catalog.png" alt="Участок 1 га">
-        <div class="card-content">
-          <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
-          <p class="price">от 4,3 млн ₸</p>
-          <div class="specs">
-            <div class="spec-row">
-              <span data-lang="land-size">Размер</span>
-              <span>8-10 соток</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-comms">Коммуникации</span>
-              <span  data-lang="land-ready">готовые</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-block">Блок</span>
-              <span>4 блок</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Карточка 3 -->
-      <div class="land-card">
-        <div class="status"  data-lang="land-status">Свободно</div>
-        <img src="./images/catalog.png" alt="Участок 1 га">
-        <div class="card-content">
-          <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
-          <p class="price">от 4,3 млн ₸</p>
-          <div class="specs">
-            <div class="spec-row">
-              <span data-lang="land-size">Размер</span>
-              <span>8-10 соток</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-comms">Коммуникации</span>
-              <span>  data-lang="land-ready"готовые</span>
-              <span data-lang="land-ready"> готовые</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-block">Блок</span>
-              <span>4 блок</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Карточка 4 -->
-      <div class="land-card">
-        <div class="status"  data-lang="land-status">Свободно</div>
-        <img src="./images/catalog.png" alt="Участок 1 га">
-        <div class="card-content">
-          <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
-          <p class="price">от 4,3 млн ₸</p>
-          <div class="specs">
-            <div class="spec-row">
-              <span data-lang="land-size">Размер</span>
-              <span>8-10 соток</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-comms">Коммуникации</span>
-              <span data-lang="land-ready">готовые</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-block">Блок</span>
-              <span>4 блок</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Карточка 5 -->
-      <div class="land-card">
-        <div class="status"  data-lang="land-status">Свободно</div>
-        <img src="./images/catalog.png" alt="Участок 1 га">
-        <div class="card-content">
-          <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
-          <p class="price">от 4,3 млн ₸</p>
-          <div class="specs">
-            <div class="spec-row">
-              <span data-lang="land-size">Размер</span>
-              <span>8-10 соток</span>
-            </div>
-            <div class="spec-row">
-              <span>Коммуникации</span>
-              <span data-lang="land-ready">готовые</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-block">Блок</span>
-              <span>4 блок</span>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Карточка 6 -->
-      <div class="land-card">
-        <div class="status"  data-lang="land-status">Свободно</div>
-        <img src="./images/catalog.png" alt="Участок 1 га">
-        <div class="card-content">
-          <h3>Участок 1 гА, (рядом с Tay Парк)</h3>
-          <p class="price">от 4,3 млн ₸</p>
-          <div class="specs">
-            <div class="spec-row">
-              <span data-lang="land-size">Размер</span>
-              <span>8-10 соток</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-comms">Коммуникации</span>
-              <span data-lang="land-ready">готовые</span>
-            </div>
-            <div class="spec-row">
-              <span data-lang="land-block" >Блок</span>
-              <span>4 блок</span>
-            </div>
-          </div>
-        </div>
+      <!-- Индикаторы -->
+      <div class="dots3">
+        <span class="dot3 active" data-slide="0"></span>
+        <span class="dot3" data-slide="1"></span>
+        <span class="dot3" data-slide="2"></span>
       </div>
     </div>
-
-    <!-- Точки-индикаторы -->
-    <div class="dots3">
-      <span class="dot3 active" data-slide="0"></span>
-      <span class="dot3" data-slide="1"></span>
-      <span class="dot3" data-slide="2"></span>
-      <span class="dot3" data-slide="3"></span>
-      <span class="dot3" data-slide="4"></span>
-      <span class="dot3" data-slide="5"></span>
-    </div>
-  </div>
-</section>
+  </section>
 </div>
-
 
 <div class="trust">
   <h1 data-lang="trust-title">Нам доверяют</h1>
@@ -515,7 +461,7 @@
     <!-- Карточка 1 -->
    <div class="feature-card">
       <div class="icon-circle">
-        <img src="./images/trust.png" alt="Иконка" class="feature-icon">
+        <img src="../images/trust.png" alt="Иконка" class="feature-icon">
       </div>
       <h3  data-lang="trust-item1">Юридическая чистота</h3>
       <a href="#" class="more-link">Подробнее</a>
@@ -524,7 +470,7 @@
     <!-- Карточка 2 -->
     <div class="feature-card">
       <div class="icon-circle">
-         <img src="./images/trust.png" alt="Иконка" class="feature-icon">
+         <img src="../images/trust.png" alt="Иконка" class="feature-icon">
       </div>
       <h3  data-lang="trust-item2">Коммуникации</h3>
       <a href="#" class="more-link">Подробнее</a>
@@ -533,7 +479,7 @@
     <!-- Карточка 3 -->
     <div class="feature-card">
       <div class="icon-circle">
-        <img src="./images/trust.png" alt="Иконка" class="feature-icon">
+        <img src="../images/trust.png" alt="Иконка" class="feature-icon">
       </div>
       <h3  data-lang="trust-item3">Близость к городу</h3>
       <a href="#" class="more-link">Подробнее</a>
@@ -542,7 +488,7 @@
     <!-- Карточка 4 -->
     <div class="feature-card">
       <div class="icon-circle">
-         <img src="./images/trust.png" alt="Иконка" class="feature-icon">
+         <img src="../images/trust.png" alt="Иконка" class="feature-icon">
       </div>
       <h3  data-lang="trust-item4">Рассрочка</h3>
       <a href="#" class="more-link">Подробнее</a>
@@ -550,72 +496,76 @@
   </div>
 </section>
 </div>
-
-
 <section class="review">
   <h1 data-lang="reviews-title">Отзывы</h1>
-<section class="reviews-slider-4">
-  <div class="slider-container4">
-    <div class="slides">
-      <!-- Отзыв 1 -->
-      <div class="review-card">
-        <div class="review-header">
-          <div class="avatar"><img src="./images/map.png" width="20px" alt=""></div>
-          <div class="reviewer-info">
-            <h4>Dinara D</h4>
-            <span>1 августа 2025</span>
+  <section class="reviews-slider-4">
+    <div class="slider-container4">
+      <div class="slides">
+        <!-- Отзыв 1 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="avatar"><img src="../images/map.png" width="20px" alt=""></div>
+            <div class="reviewer-info">
+              <h4>Dinara D</h4>
+              <span>1 августа 2025</span>
+            </div>
+          </div>
+          <div class="review-text">
+            <p>ТОО Landjer надежная и профессиональная компания.</p>
+            <p>Сделка по покупке земельного участка прошла быстро, прозрачно и без лишних сложностей.</p>
+            <p>Благодарим за компетентные консультации и внимательное отношение к клиенту. Рекомендуем!</p>
+          </div>
+          <a href="#" class="read-more" data-lang="read-more">Читать в 2GIS</a>
+        </div>
+
+        <!-- Видео -->
+        <div class="video-card">
+          <img src="../images/review.png" alt="Видео" class="video-preview">
+          <div class="play-button">
+            <a href=""><img src="../images/play.png" alt="Воспроизвести"></a>
           </div>
         </div>
-        <div class="review-text">
-          <p>ТОО Landjer надежная и профессиональная компания. </p>
-          <p>Сделка по покупке земельного участка прошла быстро, прозрачно и без лишних сложностей. </p>
-          <p>Благодарим за компетентные консультации и внимательное отношение к клиенту. Рекомендуем!</p>
+
+        <!-- Отзыв 2 -->
+        <div class="review-card">
+          <div class="review-header">
+            <div class="avatar"><img src="../images/map2.png" width="20px" alt=""></div>
+            <div class="reviewer-info">
+              <h4>Антон Аринушкин</h4>
+              <span>9 января 2025</span>
+            </div>
+          </div>
+          <div class="review-text">
+            <p>Мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+            <p>Мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+          </div>
         </div>
-        <a href="#" class="read-more" data-lang="read-more">Читать в 2GIS</a>
+
+         <div class="review-card">
+          <div class="review-header">
+            <div class="avatar"><img src="../images/map2.png" width="20px" alt=""></div>
+            <div class="reviewer-info">
+              <h4>Антон Аринушкин</h4>
+              <span>9 января 2025</span>
+            </div>
+          </div>
+          <div class="review-text">
+            <p>Мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+            <p>Мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта.</p>
+          </div>
+        </div>
       </div>
-
-    
-<!-- Видео -->
-<div class="video-card">
-  <img src="./images/review.png" alt="Видео" class="video-preview">
-  <div class="play-button">
-    <a href=""><img src="./images/play.png" alt="Воспроизвести"></a>
-  </div>
-</div>
-
       
 
-      <!-- Отзыв 2 -->
-      <div class="review-card">
-        <div class="review-header">
-          <div class="avatar"><img src="./images/map2.png" width="20px" alt=""></div>
-          <div class="reviewer-info">
-            <h4>Антон Аринушкин</h4>
-            <span style="margin-left: -110px;">9 января 2025</span>
-          </div>
-        </div>
-        <div class="review-text">
-          <p>Мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. Вам будет необходимо предоставить исходные данные, по которым наши копирайтеры составят правильный текст, который будет содержать.
-          </p>
-          <p>Мини-описание. Это текст о компании. Он необходим для дальнейшего продвижения Вашего сайта. </p>
-        </div>
+      <!-- ТОЛЬКО 3 ТОЧКИ -->
+      <div class="dots4">
+        <span class="dot4 active" data-slide="0"></span>
+        <span class="dot4" data-slide="1"></span>
+        <span class="dot4" data-slide="2"></span>
       </div>
     </div>
-
-    <!-- Точки-индикаторы (версия 4) -->
-    <div class="dots4">
-      <span class="dot4 active" data-slide="0"></span>
-      <span class="dot4" data-slide="1"></span>
-      <span class="dot4" data-slide="2"></span>
-      <span class="dot4" data-slide="3"></span>
-      <span class="dot4" data-slide="4"></span>
-      <span class="dot4" data-slide="5"></span>
-    </div>
-  </div>
+  </section>
 </section>
-</section>
-</section>
-
 
 <section class="youtube-videos">
   <h1 data-lang="faq-title">Частые вопросы</h1>
@@ -624,13 +574,13 @@
       <!-- Карточка 1 -->
       <div class="video-card">
         <div class="video-preview">
-          <img src="./images/youtube.png" alt="Видео 1">
+          <img src="../images/youtube.png" alt="Видео 1">
           <div class="badge">
-            <img src="./images/map2.png" alt="Иконка" class="badge-icon">
+            <img src="../images/map2.png" alt="Иконка" class="badge-icon">
           </div>
           <div class="video-title">Здесь будет название видео ва...</div>
           <div class="play-youtube-button">
-            <a href=""> <img src="./images/youtube_play.png" alt="Воспроизвести"></a> 
+            <a href=""> <img src="../images/youtube_play.png" alt="Воспроизвести"></a> 
           </div>
           <div class="watch-on-youtube" data-lang="watch-youtube">Посмотреть на YouTube</div>
         </div>
@@ -639,13 +589,13 @@
       <!-- Карточка 2 -->
       <div class="video-card">
         <div class="video-preview">
-          <img src="./images/youtube.png" alt="Видео 2">
+          <img src="../images/youtube.png" alt="Видео 2">
           <div class="badge">
-            <img src="./images/map2.png" alt="Иконка" class="badge-icon">
+            <img src="../images/map2.png" alt="Иконка" class="badge-icon">
           </div>
           <div class="video-title">Здесь будет название видео ва...</div>
           <div class="play-youtube-button">
-            <a href=""> <img src="./images/youtube_play.png" alt="Воспроизвести"></a> 
+            <a href=""> <img src="../images/youtube_play.png" alt="Воспроизвести"></a> 
           </div>
           <div class="watch-on-youtube" data-lang="watch-youtube">Посмотреть на YouTube</div>
         </div>
@@ -654,13 +604,13 @@
       <!-- Карточка 3 -->
       <div class="video-card">
         <div class="video-preview">
-          <img src="./images/youtube.png" alt="Видео 3">
+          <img src="../images/youtube.png" alt="Видео 3">
           <div class="badge">
-            <img src="./images/map2.png" alt="Иконка" class="badge-icon">
+            <img src="../images/map2.png" alt="Иконка" class="badge-icon">
           </div>
           <div class="video-title">Здесь будет название видео ва...</div>
           <div class="play-youtube-button">
-            <a href=""> <img src="./images/youtube_play.png" alt="Воспроизвести"></a> 
+            <a href=""> <img src="../images/youtube_play.png" alt="Воспроизвести"></a> 
           </div>
           <div class="watch-on-youtube" data-lang="watch-youtube">Посмотреть на YouTube</div>
         </div>
@@ -670,13 +620,13 @@
       <!-- Карточка 4 -->
       <div class="video-card">
         <div class="video-preview">
-          <img src="./images/youtube.png" alt="Видео 4">
+          <img src="../images/youtube.png" alt="Видео 4">
           <div class="badge">
-            <img src="./images/map2.png" alt="Иконка" class="badge-icon">
+            <img src="../images/map2.png" alt="Иконка" class="badge-icon">
           </div>
           <div class="video-title">Здесь будет название видео ва...</div>
           <div class="play-youtube-button">
-            <a href=""> <img src="./images/youtube_play.png" alt="Воспроизвести"></a> 
+            <a href=""> <img src="../images/youtube_play.png" alt="Воспроизвести"></a> 
           </div>
           <div class="watch-on-youtube" data-lang="watch-youtube">Посмотреть на YouTube</div>
         </div>
@@ -685,13 +635,13 @@
       <!-- Карточка 5 -->
       <div class="video-card">
         <div class="video-preview">
-          <img src="./images/youtube.png" alt="Видео 5">
+          <img src="../images/youtube.png" alt="Видео 5">
           <div class="badge">
-            <img src="./images/map2.png" alt="Иконка" class="badge-icon">
+            <img src="../images/map2.png" alt="Иконка" class="badge-icon">
           </div>
           <div class="video-title">Здесь будет название видео ва...</div>
           <div class="play-youtube-button">
-            <a href=""> <img src="./images/youtube_play.png" alt="Воспроизвести"></a> 
+            <a href=""> <img src="../images/youtube_play.png" alt="Воспроизвести"></a> 
           </div>
           <div class="watch-on-youtube" data-lang="watch-youtube">Посмотреть на YouTube</div>
         </div>
@@ -700,13 +650,13 @@
       <!-- Карточка 6 -->
       <div class="video-card">
         <div class="video-preview">
-          <img src="./images/youtube.png" alt="Видео 6">
+          <img src="../images/youtube.png" alt="Видео 6">
           <div class="badge">
-            <img src="./images/map2.png" alt="Иконка" class="badge-icon">
+            <img src="../images/map2.png" alt="Иконка" class="badge-icon">
           </div>
           <div class="video-title">Здесь будет название видео ва...</div>
           <div class="play-youtube-button">
-            <a href=""> <img src="./images/youtube_play.png" alt="Воспроизвести"></a> 
+            <a href=""> <img src="../images/youtube_play.png" alt="Воспроизвести"></a> 
           </div>
           <div class="watch-on-youtube" data-lang="watch-youtube">Посмотреть на YouTube</div>
         </div>
@@ -725,7 +675,6 @@
   </div>
 </section>
 
-
 <section class="blog">
    <h1>Наш блог</h1>
 
@@ -734,7 +683,7 @@
   <div class="article-cards">
     <!-- Карточка 1 -->
     <div class="article-card">
-      <img src="./images/blog.png" alt="Статья 1">
+      <img src="../images/blog.png" alt="Статья 1">
       <div class="card-content">
         <p>Здесь будет текст новой статьи, ваши данные здесь будут</p>
         <span class="date">1 августа 2025</span>
@@ -743,7 +692,7 @@
 
     <!-- Карточка 2 -->
     <div class="article-card">
-      <img src="./images/blog.png" alt="Статья 2">
+      <img src="../images/blog.png" alt="Статья 2">
       <div class="card-content">
         <p>Здесь будет текст новой статьи, ваши данные здесь будут</p>
         <span class="date">1 августа 2025</span>
@@ -752,7 +701,7 @@
 
     <!-- Карточка 3 -->
     <div class="article-card">
-      <img src="./images/blog.png" alt="Статья 3">
+      <img src="../images/blog.png" alt="Статья 3">
       <div class="card-content">
         <p>Здесь будет текст новой статьи, ваши данные здесь будут</p>
         <span class="date">1 августа 2025</span>
@@ -766,67 +715,57 @@
 <section class="map-section">
   <div class="map-container">
     <div class="building-image">
-      <img src="./images/carta1.png" alt="Офис продаж">
+      <img src="../images/carta1.png" alt="Офис продаж">
     </div>
 
     <div>
-      <img src="./images/footermap.png" class="map-embed">
+      <img src="../images/footermap.png" class="map-embed">
     </div>
   </div>
 </section>
 
 
- 
-  
- <!-- Контейнер для кнопки, остаётся всегда видимым -->
-  <div class="top-bar-toggle-container">
+<footer class="footer-section">
+
+      <div class="top-bar-toggle-container">
     <button class="dropdown-arrow" id="toggleTopBarBtn">
-      <img src="./images/arrow.png" alt="Скрыть/показать панель" />
+      <img src="../images/arrow.png" alt="Скрыть/показать панель" />
     </button>
   </div>
-
-  <!-- Панель контактов -->
-  <div class="top-bar" id="topBar">
-    <div class="contact-info">WHATSAPP: +7 (700) 740-14-14</div>
+  <div class="footer-top-bar">
+    <div class="contact-info">WHATSAPP: +7 (700) 740-14-14|</div>
     <div class="contact-info">ОТДЕЛ ПРОДАЖ: +7 (700) 740-14-14</div>
     <div class="contact-info">г.Астана, Есильский р-н, Коргалжынское шоссе, участок 86</div>
   </div>
 
-  <div class="contact-section">
-    <div class="logo-container">
-      <img src="./images/black_logo.png" alt="Landjer Logo" class="logo_black" />
+  <div class="footer-content">
+    <div class="footer-logo">
+      <img src="../images/black_logo.png" alt="Landjer Logo" class="logo_black" />
     </div>
 
-    <div class="contact-text">
+    <div class="footer-text">
       <h2>Свяжитесь с нами</h2>
       <p>Оставьте свои данные и мы перезвоним вам в ближайшее рабочее время.</p>
     </div>
+   
+    <img src="../images/footer_line.png" alt="Стрелка" class="arrow-image" />
 
-    <img src="./images/footer_line.png" alt="Стрелка" class="arrow-image" />
-
-    <div class="contact-buttons">
-      <a href="#" class="whatsapp-button">
-        <img src="./images/footer_whatsapp.png" alt="WhatsApp" />
+    <div class="footer-actions">
+      <a href="https://wa.me/77000000000" class="whatsapp-button" target="_blank">
+        <img src="../images/footer_whatsapp.png" alt="WhatsApp" />
       </a>
       <button class="submit-button">Оставить заявку</button>
     </div>
   </div>
 
-  <hr style="border: 1px solid rgb(160, 159, 159); margin-top: 20px; width: 98%; margin-left: 1%;">
-  <div>
-    <h3 class="footer_line">ABC DESIGN</h3>
+  <hr class="footer-divider" />
+
+  <div class="footer-copyright">
+    <h3>ABC DESIGN</h3>
   </div>
+</footer>
 
 
-</section>
-
-
-
-
-
-
-  <script src="load-header.js"></script>
-  <script src="script.js"></script>
-
+<script src="./script2.js"></script>
 </body>
 </html>
