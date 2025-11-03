@@ -221,6 +221,7 @@ if (toggleBtn && topBar) {
       }
     });
   }
+  
 
   // Переключение языка по клику
   document.querySelector('.lang-selector').addEventListener('click', () => {
@@ -233,7 +234,48 @@ if (toggleBtn && topBar) {
   document.addEventListener('DOMContentLoaded', () => {
     const savedLang = getCurrentLang();
     setLang(savedLang);
-  });
+  }
+);
+  
 
   });
+
+  const toggleBtn = document.getElementById('toggleTopBarBtn');
+const topBar = document.querySelector('.footer-top-bar');
+
+if (toggleBtn && topBar) {
+  toggleBtn.addEventListener('click', function () {
+    topBar.classList.toggle('hidden');
+    const arrowImg = toggleBtn.querySelector('img');
+    if (arrowImg) {
+      arrowImg.classList.toggle('rotated');
+    }
+  });
+  const burger = document.querySelector('.burger-icon');
+  const navMenu = document.querySelector('.nav-menu');
+
+  if (burger && navMenu) {
+    burger.addEventListener('click', () => {
+      navMenu.classList.toggle('active');
+    });
+
+    // Закрывать меню при клике на ссылку
+    document.querySelectorAll('.nav-item').forEach(link => {
+      link.addEventListener('click', () => {
+        navMenu.classList.remove('active');
+      });
+    });
+  }
+
+  // Скрытие/показ верхней панели футера
+  const toggleBtn = document.getElementById('toggleTopBarBtn');
+  const topBar = document.querySelector('.footer-top-bar');
+  if (toggleBtn && topBar) {
+    toggleBtn.addEventListener('click', () => {
+      topBar.classList.toggle('hidden');
+      const img = toggleBtn.querySelector('img');
+      if (img) img.classList.toggle('rotated');
+    });} 
+}
+
 

@@ -1427,6 +1427,7 @@ body {
   }
   .burger-icon {
     display: flex;
+    overflow-x:hidden ;
   }
 
   .nav-menu,

@@ -339,6 +339,212 @@ body {
   margin-left: 50px;
 }
 
+
+@media (max-width: 768px) {
+  .header {
+    padding: 12px 16px;
+    gap: 16px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .logo-img {
+    height: 60px;
+  }
+
+  /* Показываем бургер-меню */
+  .burger-icon {
+    display: flex;
+    z-index: 1001;
+  }
+
+  /* Скрываем меню по умолчанию */
+  .nav-menu {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    padding: 20px;
+    gap: 16px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    border-radius: 0 0 20px 20px;
+    margin: 0;
+    min-width: auto;
+    align-items: flex-start;
+  }
+
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-item {
+    font-size: 16px;
+    padding: 10px 0;
+    width: 100%;
+    color: #000;
+  }
+
+  .nav-item.active::after,
+  .nav-item:hover::after {
+    bottom: -8px;
+    width: 30px;
+    height: 3px;
+  }
+
+  .lang-selector {
+    padding: 12px 10px;
+    font-size: 16px;
+    min-width: 60px;
+    text-align: center;
+  }
+
+  .project-page {
+    padding: 2rem 1rem;
+    margin-top: 80px;
+  }
+
+  .breadcrumb {
+    font-size: 0.85rem;
+    margin-top: 30px;
+    margin-bottom: 1rem;
+  }
+
+  .project-title {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Галерея */
+  .top-row {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .top-row .wide,
+  .top-row .square,
+  .bottom-row .square {
+    aspect-ratio: auto;
+    height: 200px;
+  }
+
+  .bottom-row {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .dropdown-arrow{
+    margin-left: 76%;
+  }
+  .footer-top-bar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    padding: 12px 0;
+    font-size: 0.9rem;
+    margin-top: -80px;
+    margin-left: -20px;
+    width: 410px;
+    text-align: start;
+  }
+  .contact-info{
+    text-align: start;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 15px;
+    margin-top: 100px;
+  }
+
+  .footer-logo img {
+    width: 150px;
+    margin-left: 0;
+  }
+
+  .footer-text {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .footer-text h2 {
+    font-size: 1.4rem;
+  }
+
+  .footer-text p {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+
+  .footer-actions {
+    margin-left: 0;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .whatsapp-button img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .submit-button {
+    padding: 20px 20px;
+    font-size: 0.9rem;
+    min-width: 180px;
+  }
+
+  .arrow-image {
+  display: none;
+  }
+
+  .footer-divider {
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .footer-copyright {
+    margin-left: 15px;
+    font-size: 0.7rem;
+  }
+}
+
+/* Планшеты (769px – 1024px) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .top-row {
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+  }
+
+  .top-row .wide {
+    grid-column: span 2;
+  }
+
+  .bottom-row {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .project-title {
+    font-size: 2.2rem;
+  }
+
+  .footer-content {
+    gap: 30px;
+  }
+
+  .footer-text {
+    max-width: 350px;
+    margin-left: 300px;
+  }
+
+  .arrow-image {
+    margin-left: 58%;
+  }
+}
   </style>
 </head>
 <body>
@@ -439,19 +645,6 @@ body {
     <h3>ABC DESIGN</h3>
   </div>
 </footer>
-<script >
-  const toggleBtn = document.getElementById('toggleTopBarBtn');
-const topBar = document.querySelector('.footer-top-bar');
-
-if (toggleBtn && topBar) {
-  toggleBtn.addEventListener('click', function () {
-    topBar.classList.toggle('hidden');
-    const arrowImg = toggleBtn.querySelector('img');
-    if (arrowImg) {
-      arrowImg.classList.toggle('rotated');
-    }
-  });
-}
-</script>
+<script src="../script2.js"></script>
 </body>
 </html>
