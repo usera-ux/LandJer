@@ -87,6 +87,17 @@ body {
   background: white;
   border-radius: 2px;
 }
+.nav-item:hover::after {
+  content: '';
+  position: absolute;
+  bottom: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 4px;
+  background: white;
+  border-radius: 2px;
+}
 
 .lang-selector {
   background: rgba(255, 255, 255, 0.2);
